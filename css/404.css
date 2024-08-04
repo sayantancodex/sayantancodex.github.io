@@ -1,84 +1,73 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
-
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+/* ---- reset ---- */
 body {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
   margin: 0;
-  color: #fff;
-  font-size: 25vw;
-  font-family: "Fira Mono", monospace;
+  font:
+    normal 75% Arial,
+    Helvetica,
+    sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+/* ---- tsparticles container ---- */
+.github {
+  bottom: 10px;
+  right: 10px;
+  position: fixed;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0 12px 6px 12px;
+  border: 1px solid #000;
 }
 
-#glitch {
-  animation: glitch 1s linear infinite;
+.github a:hover,
+.github a:link,
+.github a:visited,
+.github a:active {
+  color: #000;
+  text-decoration: none;
 }
 
-@keyframes glitch {
-  2%,
-  64% {
-    transform: translate(2px, 0) skew(0deg);
-  }
-
-  4%,
-  60% {
-    transform: translate(-2px, 0) skew(0deg);
-  }
-
-  62% {
-    transform: translate(0, 0) skew(5deg);
-  }
+.github img {
+  height: 30px;
 }
 
-#glitch::before,
-#glitch::after {
-  content: attr(title);
+.github #gh-project {
+  font-size: 20px;
+  padding-left: 5px;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+.textContainer {
   position: absolute;
+  color: white;
+}
+#tsparticles {
+  z-index: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
   left: 0;
+  margin: 0;
 }
-
-#glitch::before {
-  animation: glitchTop 1s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+section {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
 }
-
-@keyframes glitchTop {
-  2%,
-  64% {
-    transform: translate(2px, -2px);
-  }
-
-  4%,
-  60% {
-    transform: translate(-2px, 2px);
-  }
-
-  62% {
-    transform: translate(13px, -1px) skew(-13deg);
-  }
+section h1 {
+  font-family: "Audiowide", sans-serif;
+  font-size: 11rem;
+  margin: 0%;
+  margin-top: 4rem;
 }
-
-#glitch::after {
-  animation: glitchBottom 1.5s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBottom {
-  2%,
-  64% {
-    transform: translate(-2px, 0);
-  }
-
-  4%,
-  60% {
-    transform: translate(-2px, 0);
-  }
-
-  62% {
-    transform: translate(-22px, 5px) skew(21deg);
-  }
+section h2 {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 2rem;
+  margin: 0%;
 }
