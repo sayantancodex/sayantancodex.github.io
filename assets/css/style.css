@@ -56,10 +56,7 @@ img {
   -webkit-touch-callout: none;
 }
 
-h1{
-  text-shadow: 0.5px 0 #000000, -0.5px 0 #000000, 0 0.5px #000000, 0 -0.5px #000000,
-  0.5px 0.5px #000000, 0.5px -0.5px #000000, 0.5px -0.5px #000000, -0.5px 0.51px #000000;
-}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
