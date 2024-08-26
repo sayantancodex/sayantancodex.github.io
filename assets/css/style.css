@@ -30,6 +30,7 @@ body::before {
 
 @media (min-width: 1024px) {
   body::before {
+    
     background-attachment: fixed;
   }
 }
@@ -55,11 +56,19 @@ img {
   -webkit-touch-callout: none;
 }
 
+h1{
+  text-shadow: 0.5px 0 #000000, -0.5px 0 #000000, 0 0.5px #000000, 0 -0.5px #000000,
+  0.5px 0.5px #000000, 0.5px -0.5px #000000, 0.5px -0.5px #000000, -0.5px 0.5px #000000;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+  
+  
 }
 
 .background-image {
+  background: "assets/img/background/new2.mp4";
   position: absolute;
   display: block;
   margin-left: auto;
@@ -101,7 +110,7 @@ svg {
 }
 
 #header h1 a, #header h1 a:hover {
-  color: #dee2e6;
+  color: #ffffff;
   line-height: 1;
   display: inline-block;
 }
