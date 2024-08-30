@@ -696,6 +696,53 @@ section .container {
   margin: 10px;
 }
 
+.card {
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin: 10 auto; */
+  padding: 10em;
+  width: 300px;
+  padding-top: 10px;
+  background: #09203a;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.card::before{
+  filter: blur(0.8rem);
+  opacity: 1;
+}
+
 .services .icon-box .icon {
   margin: 0 auto;
   width: 64px;
