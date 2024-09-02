@@ -689,6 +689,7 @@ section .container {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
+  border-radius: 10px;
   text-align: center;
   background: #09203a;
   padding: 40px 40px;
