@@ -38,6 +38,7 @@
     text-align: center;
     border-radius: 10px;
     position: relative;
+    font-size: 14px;
   }
   
   @property --angle{
